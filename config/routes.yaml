@@ -7,3 +7,10 @@ add_item:
     path:      /items
     controller: Api\Application\Controller\ApiController::addItem
     methods: ['POST']
+
+remove_item:
+    path:      /items/{itemId}
+    controller: Api\Application\Controller\ApiController::removeItem
+    methods: ['DELETE']
+    requirements:
+        itemId: '\d+'

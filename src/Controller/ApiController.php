@@ -54,4 +54,10 @@ class ApiController
             Response::HTTP_UNPROCESSABLE_ENTITY
         );
     }
+
+    public function removeItem(int $itemId): Response
+    {
+        $this->itemService->removeItem($itemId);
+        return new JsonResponse([], Response::HTTP_NO_CONTENT);
+    }
 }

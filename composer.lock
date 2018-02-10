@@ -488,7 +488,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jgawlik/api-package.git",
-                "reference": "c1486052c1c5c9b78e35e470c22f591292721157"
+                "reference": "89726c1ce83783b42ff40a320bdcc14d9e00acb4"
             },
             "require": {
                 "doctrine/dbal": "^2.6"
@@ -505,7 +505,7 @@
                     "email": "justyna.gawlik@yahoo.pl"
                 }
             ],
-            "time": "2018-02-10T18:54:08+00:00"
+            "time": "2018-02-10T19:50:08+00:00"
         },
         {
             "name": "psr/cache",
