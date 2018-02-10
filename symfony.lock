@@ -142,8 +142,5 @@
     },
     "symfony/yaml": {
         "version": "v4.0.4"
-    },
-    "zircote/swagger-php": {
-        "version": "2.0.13"
     }
 }

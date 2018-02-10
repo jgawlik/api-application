@@ -7,21 +7,16 @@ services:
         autoconfigure: true
         public: false
 
-    App\:
+    Api\Application\:
         resource: '../src/*'
         exclude: '../src/{Entity,Migrations,Tests,Kernel.php}'
 
-    App\Controller\:
+    Api\Application\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
     Api\:
         resource: '../vendor/jgawlik/api-package/src/*'
-        exclude: '../src/{Entity,Tests}'
-
-    Api\Controller\:
-        resource: '../vendor/jgawlik/api-package/src/Controller'
-        tags: ['controller.service_arguments']
 
     Doctrine\DBAL\Connection:
         factory:      Doctrine\DBAL\DriverManager::getConnection

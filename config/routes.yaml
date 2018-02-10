@@ -1,9 +1,9 @@
 get_items:
     path:      /items
-    controller: Api\Controller\ApiController::getItems
+    controller: Api\Application\Controller\ApiController::getItems
     methods: ['GET']
 
 add_item:
     path:      /items
-    controller: Api\Controller\ApiController::addItem
+    controller: Api\Application\Controller\ApiController::addItem
     methods: ['POST']
