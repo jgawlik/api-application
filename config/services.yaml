@@ -1,4 +1,5 @@
 parameters:
+    locale: 'pl'
 
 services:
     _defaults:
