@@ -13,3 +13,19 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+
+    Api\:
+        resource: '../vendor/jgawlik/api-package/src/*'
+        exclude: '../src/{Entity,Tests}'
+
+    Api\Controller\:
+        resource: '../vendor/jgawlik/api-package/src/Controller'
+        tags: ['controller.service_arguments']
+
+    Doctrine\DBAL\Connection:
+        factory:      Doctrine\DBAL\DriverManager::getConnection
+        arguments:
+            $params:
+                driver:   pdo_mysql
+                url:      '%env(DATABASE_URL)%'
+                charset:  UTF8

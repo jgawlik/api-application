@@ -1,0 +1,4 @@
+get_items:
+    path:      /items
+    controller: Api\Controller\ApiController::getItems
+    methods: ['GET']
