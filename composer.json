@@ -5,6 +5,7 @@
     "require": {
         "php": "^7.1.3",
         "ext-iconv": "*",
+        "jgawlik/api-package": "dev-master",
         "symfony/console": "^4.0",
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^4.0",
@@ -55,5 +56,11 @@
             "id": "01C5ZY5JMW8ZHH1TRZVF35D513",
             "allow-contrib": false
         }
-    }
+    },
+    "repositories": [
+        {
+            "url": "https://github.com/jgawlik/api-package.git",
+            "type": "git"
+        }
+    ]
 }
