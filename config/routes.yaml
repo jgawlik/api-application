@@ -8,6 +8,13 @@ add_item:
     controller: Api\Application\Controller\ApiController::addItem
     methods: ['POST']
 
+update_item:
+    path:      /items/{itemId}
+    controller: Api\Application\Controller\ApiController::updateItem
+    methods: ['PATCH']
+    requirements:
+        itemId: '\d+'
+
 remove_item:
     path:      /items/{itemId}
     controller: Api\Application\Controller\ApiController::removeItem

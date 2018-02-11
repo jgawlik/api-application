@@ -55,6 +55,22 @@ class ApiController
         );
     }
 
+    public function updateItem(Request $request, int $itemId): Response
+    {
+        $form = $this->formFactory->create(AddItemFromType::class);
+        $form->submit($request->request->all());
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData();
+            $this->itemService->updateItem($data['name'], $data['amount'], $itemId);
+            return new JsonResponse([], Response::HTTP_NO_CONTENT);
+        }
+
+        return new JsonResponse(
+            (new ValidationErrorResponse($form->getErrors(true)))->respond(),
+            Response::HTTP_UNPROCESSABLE_ENTITY
+        );
+    }
+
     public function removeItem(int $itemId): Response
     {
         $this->itemService->removeItem($itemId);
