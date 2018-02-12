@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea4b78d51bf52af5c92d508fa4b4863f",
+    "content-hash": "2ecae0c394fcb3860433b2b3c69c3510",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -483,20 +483,29 @@
             "time": "2014-09-09T13:34:57+00:00"
         },
         {
-            "name": "jgawlik/api-package",
+            "name": "jgawlik/item-repository",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jgawlik/api-package.git",
-                "reference": "89726c1ce83783b42ff40a320bdcc14d9e00acb4"
+                "url": "https://github.com/jgawlik/item-repository.git",
+                "reference": "b55e13f2d031b630362d99a170ddaafa0933f0a0"
             },
             "require": {
                 "doctrine/dbal": "^2.6"
+            },
+            "require-dev": {
+                "phpunit/dbunit": "^3.0",
+                "phpunit/phpunit": "^6.5"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Api\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Api\\Tests\\": "tests/"
                 }
             },
             "authors": [
@@ -505,7 +514,7 @@
                     "email": "justyna.gawlik@yahoo.pl"
                 }
             ],
-            "time": "2018-02-10T19:50:08+00:00"
+            "time": "2018-02-12T20:41:40+00:00"
         },
         {
             "name": "psr/cache",
@@ -2282,7 +2291,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "jgawlik/api-package": 20
+        "jgawlik/item-repository": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

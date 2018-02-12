@@ -26,7 +26,7 @@
     "doctrine/lexer": {
         "version": "v1.0.1"
     },
-    "jgawlik/api-package": {
+    "jgawlik/item-repository": {
         "version": "dev-master"
     },
     "psr/cache": {

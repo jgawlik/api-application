@@ -16,7 +16,7 @@ services:
         tags: ['controller.service_arguments']
 
     Api\:
-        resource: '../vendor/jgawlik/api-package/src/*'
+        resource: '../vendor/jgawlik/item-repository/src/*'
 
     Doctrine\DBAL\Connection:
         factory:      Doctrine\DBAL\DriverManager::getConnection
