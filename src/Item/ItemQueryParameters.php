@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Api\Application\Item;
 
 use Api\Repository\ItemQueryInterface;
@@ -14,8 +12,8 @@ class ItemQueryParameters implements ItemQueryInterface
     public function __construct(array $amountOptions)
     {
         $this->validateParameters($amountOptions);
-        $this->equals = $this->getPropertyValueToSet('equals', $amountOptions);
-        $this->greater = $this->getPropertyValueToSet('greater', $amountOptions);
+        $this->equals = $this->getPropertyValueToSet('amount_equals', $amountOptions);
+        $this->greater = $this->getPropertyValueToSet('amount_greater', $amountOptions);
     }
 
     public function getGreater(): ?int
@@ -35,10 +33,10 @@ class ItemQueryParameters implements ItemQueryInterface
 
     private function validateParameters(array $amountOptions)
     {
-        if (isset($amountOptions['greater']) && !is_int($amountOptions['greater'])) {
+        if (isset($amountOptions['amount_greater']) && !ctype_digit($amountOptions['amount_greater'])) {
             throw new \InvalidArgumentException('Parametr greater musi być integerem!');
         }
-        if (isset($amountOptions['equals']) && !is_int($amountOptions['equals'])) {
+        if (isset($amountOptions['amount_equals']) && !ctype_digit($amountOptions['amount_equals'])) {
             throw new \InvalidArgumentException('Parametr equals musi być integerem!');
         }
     }

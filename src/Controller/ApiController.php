@@ -29,7 +29,7 @@ class ApiController
     public function getItems(Request $request): Response
     {
         try {
-            $itemQueryParameters = new ItemQueryParameters($request->query->get('amount', []));
+            $itemQueryParameters = new ItemQueryParameters($request->query->all());
         } catch (\InvalidArgumentException $exception) {
             $errorResponse = new ErrorResponse($exception->getMessage());
             return new JsonResponse($errorResponse->respond(), Response::HTTP_UNPROCESSABLE_ENTITY);
