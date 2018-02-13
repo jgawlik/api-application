@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Api\Application\Controller;
 
-use Api\Application\Form\Type\AddItemFromType;
+use Api\Application\Form\Type\ItemFromType;
 use Api\Application\Response\ItemResponse;
 use Api\Application\Response\ValidationErrorResponse;
 use Api\Application\Item\ItemQueryParameters;
@@ -40,7 +40,7 @@ class ApiController
 
     public function addItem(Request $request): Response
     {
-        $form = $this->formFactory->create(AddItemFromType::class);
+        $form = $this->formFactory->create(ItemFromType::class);
         $form->submit($request->request->all());
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
@@ -57,7 +57,7 @@ class ApiController
 
     public function updateItem(Request $request, int $itemId): Response
     {
-        $form = $this->formFactory->create(AddItemFromType::class);
+        $form = $this->formFactory->create(ItemFromType::class);
         $form->submit($request->request->all());
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
