@@ -3,6 +3,13 @@ get_items:
     controller: Api\Application\Controller\ApiController::getItems
     methods: ['GET']
 
+get_item:
+    path:      /v1/items/{itemId}
+    controller: Api\Application\Controller\ApiController::getItem
+    methods: ['GET']
+    requirements:
+        itemId: '\d+'
+
 add_item:
     path:      /v1/items
     controller: Api\Application\Controller\ApiController::addItem

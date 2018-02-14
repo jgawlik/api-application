@@ -488,7 +488,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jgawlik/item-repository.git",
-                "reference": "b55e13f2d031b630362d99a170ddaafa0933f0a0"
+                "reference": "ac5a62167e68f4eebfc351dc01219007de50f372"
             },
             "require": {
                 "doctrine/dbal": "^2.6"
@@ -514,7 +514,7 @@
                     "email": "justyna.gawlik@yahoo.pl"
                 }
             ],
-            "time": "2018-02-12T20:41:40+00:00"
+            "time": "2018-02-14T10:30:11+00:00"
         },
         {
             "name": "psr/cache",
