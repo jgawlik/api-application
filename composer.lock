@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "98b44e87af4052bb1255990c32f6c48d",
+    "content-hash": "d56aa115cd264118fff8de01652d6b66",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -484,7 +484,7 @@
         },
         {
             "name": "jgawlik/item-repository",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jgawlik/item-repository.git",
@@ -3035,9 +3035,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "jgawlik/item-repository": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
